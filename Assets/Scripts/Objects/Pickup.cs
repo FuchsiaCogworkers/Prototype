@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
+public class Pickup : Interactable {
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour {
 		
 	}
 
-    public void Interact()
+    void Interact()
     {
 
     }

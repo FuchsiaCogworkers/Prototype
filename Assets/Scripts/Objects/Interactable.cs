@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour {
+public class Interactable : MonoBehaviour {
+
+    public float interactTime;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +16,7 @@ public class Pickup : MonoBehaviour {
 		
 	}
 
-    void Interact()
+    public void Interact()
     {
 
     }
