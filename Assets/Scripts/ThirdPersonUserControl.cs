@@ -66,6 +66,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 #if !MOBILE_INPUT
 			// walk speed multiplier
 	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+
+            if (Input.GetButtonDown("Fire2"))
+            {
+                Interact();
+            }
 #endif
 
             // pass all parameters to the character control script
@@ -73,14 +78,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Jump = false;
         }
 
-        void OnTriggerEnter(Collider other)
+        //void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.tag == "Gun")
+        //    {
+        //        SendMessage("ChangeGun", other.gameObject);
+        //       // gameObject.GetComponent<Inventory>().currGun = other.gameObject;
+        //    }
+        //    other.gameObject.SetActive(false);
+        //}
+
+        public virtual void Interact()
         {
-            if (other.tag == "Gun")
-            {
-                SendMessage("ChangeGun", other.gameObject);
-               // gameObject.GetComponent<Inventory>().currGun = other.gameObject;
-            }
-            other.gameObject.SetActive(false);
+
         }
     }
 }
