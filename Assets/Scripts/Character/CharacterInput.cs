@@ -45,7 +45,7 @@ public class CharacterInput : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        //handles interacting with objects
+        //handles interacting with Interactable objects
         if (Input.GetButton("Interact"))
         {
             other.GetComponent<Interactable>().Interact(gameObject);

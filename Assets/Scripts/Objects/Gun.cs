@@ -30,7 +30,10 @@ public class Gun : Pickup {
 
     public override void Interact(GameObject player)
     {
-        GrabPickup(player);
+        if(player.GetComponent<Cog>())
+        {
+            GrabPickup(player);
+        }
     }
 
     public override void GrabPickup(GameObject player)
@@ -40,18 +43,23 @@ public class Gun : Pickup {
 
         if (oldGun)
         {
-            Debug.Log("There's a gun");
+            //Debug.Log("There's a gun");
             oldGun.transform.parent = null;
-
+            oldGun.Idle();
             transform.position = gunLoc.position;
             transform.parent = gunLoc;
         }
         else
         {
-            Debug.Log("There's no gun");
+            //Debug.Log("There's no gun");
             transform.position = gunLoc.position;
             transform.parent = gunLoc;
         }
-        player.GetComponent<CharacterInput>().currGun = this;
+        player.GetComponent<Cog>().currGun = this;
+    }
+
+    public override void Idle()
+    {
+        throw new System.NotImplementedException();
     }
 }
