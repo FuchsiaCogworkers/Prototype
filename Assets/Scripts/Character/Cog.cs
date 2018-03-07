@@ -4,14 +4,5 @@ using UnityEngine;
 
 public class Cog : CharacterInput
 {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Pickup cogCogment;
 }

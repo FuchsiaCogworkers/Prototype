@@ -11,8 +11,6 @@ public class CharacterInput : MonoBehaviour
     public float rotSpeed = 10.0F;
     private Vector3 moveDirection = Vector3.zero;
 
-    private bool wantsToInteract = false;
-
     public Gun currGun;
     CharacterController controller;
 
@@ -50,7 +48,6 @@ public class CharacterInput : MonoBehaviour
         //handles interacting with objects
         if (Input.GetButton("Interact"))
         {
-            Debug.Log("Calling Interact");
             other.GetComponent<Interactable>().Interact(gameObject);
         }
     }
