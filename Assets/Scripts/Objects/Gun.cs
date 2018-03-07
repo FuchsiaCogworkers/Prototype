@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -62,4 +63,9 @@ public class Gun : Pickup {
     {
         throw new System.NotImplementedException();
     }
+
+    //internal void meleeAttack(GameObject target)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }

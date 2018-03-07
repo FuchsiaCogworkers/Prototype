@@ -1072,6 +1072,8 @@ MonoBehaviour:
   jumpSpeed: 8
   gravity: 20
   rotSpeed: 10
+  currGun: {fileID: 0}
+  cogCogment: {fileID: 0}
 --- !u!114 &775408538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2906,6 +2908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   speed: 75.91
+  projectileLifespan: 3
   fireRate: 0.11
   augment: {fileID: 0}
 --- !u!1 &1861265603
@@ -2966,7 +2969,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862573717}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3017,7 +3020,7 @@ GameObject:
   - component: {fileID: 1877234328}
   - component: {fileID: 1877234327}
   - component: {fileID: 1877234331}
-  - component: {fileID: 1877234332}
+  - component: {fileID: 1877234326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3025,6 +3028,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1877234326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877234325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2321150a1676a0040a932ba2104730c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  jumpSpeed: 8
+  gravity: 20
+  rotSpeed: 10
+  currGun: {fileID: 0}
+  cogCogment: {fileID: 0}
 --- !u!23 &1877234327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3111,21 +3131,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1877234332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877234325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c5f3efb43b0044181f50d70dfd33f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
-  gravity: 20
-  rotSpeed: 50
 --- !u!1 &1887439051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,6 +3322,7 @@ MonoBehaviour:
   projectile: {fileID: 54823788870851674, guid: 8eef2f4a21a8a934fa55ff7461e28be2,
     type: 2}
   speed: 50
+  projectileLifespan: 3
   fireRate: 0.11
   augment: {fileID: 0}
 --- !u!23 &2000750078
@@ -3547,6 +3553,7 @@ MonoBehaviour:
   projectile: {fileID: 54823788870851674, guid: 8eef2f4a21a8a934fa55ff7461e28be2,
     type: 2}
   speed: 50
+  projectileLifespan: 3
   fireRate: 0.11
   augment: {fileID: 0}
 --- !u!1 &2031906869

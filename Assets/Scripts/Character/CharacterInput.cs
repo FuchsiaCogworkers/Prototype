@@ -11,6 +11,8 @@ public class CharacterInput : MonoBehaviour
     public float rotSpeed = 10.0F;
     private Vector3 moveDirection = Vector3.zero;
 
+    public float health = 100;
+
     public Gun currGun;
     CharacterController controller;
 
@@ -19,7 +21,7 @@ public class CharacterInput : MonoBehaviour
         controller = GetComponent<CharacterController>();
         currGun = GetComponentInChildren<Gun>();
     }
-    void Update()
+    public void Update()
     {
         //handles the movement
         if (controller.isGrounded)
@@ -43,12 +45,18 @@ public class CharacterInput : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    public virtual void OnTriggerStay(Collider other)
     {
         //handles interacting with Interactable objects
         if (Input.GetButton("Interact"))
         {
             other.GetComponent<Interactable>().Interact(gameObject);
         }
+    }
+
+    public virtual void TakeDamage(float damage)
+    {
+        health -= damage;
+        //SendMessage("GainExp", damage);
     }
 }
