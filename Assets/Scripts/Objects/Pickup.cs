@@ -14,7 +14,7 @@ public class Pickup : Interactable {
 		
 	}
 
-    void Interact()
+    public override void Interact(GameObject player)
     {
 
     }

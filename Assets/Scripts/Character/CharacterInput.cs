@@ -11,13 +11,15 @@ public class CharacterInput : MonoBehaviour
     public float rotSpeed = 10.0F;
     private Vector3 moveDirection = Vector3.zero;
 
-    Gun currGun;
+    private bool wantsToInteract = false;
+
+    public Gun currGun;
     CharacterController controller;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        currGun = GetComponent<Gun>();
+        currGun = GetComponentInChildren<Gun>();
     }
     void Update()
     {
@@ -40,15 +42,16 @@ public class CharacterInput : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             currGun.Fire();
-        }        
+        }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerStay(Collider other)
     {
         //handles interacting with objects
-        if (Input.GetButtonDown("Interact"))
+        if (Input.GetButton("Interact"))
         {
-            collision.gameObject.GetComponent<Interactable>().Interact();
+            Debug.Log("Calling Interact");
+            other.GetComponent<Interactable>().Interact(gameObject);
         }
     }
 }

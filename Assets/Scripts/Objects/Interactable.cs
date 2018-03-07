@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
+public abstract class Interactable : MonoBehaviour {
 
-    public float interactTime;
+    // public float interactTime;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //// Use this for initialization
+    //void Start () {
 
-    public void Interact()
-    {
+    //}
 
-    }
+    //// Update is called once per frame
+    //void Update () {
+
+    //}
+
+    public abstract void Interact(GameObject player);
 }
