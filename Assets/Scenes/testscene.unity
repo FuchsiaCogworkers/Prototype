@@ -1072,6 +1072,7 @@ MonoBehaviour:
   jumpSpeed: 8
   gravity: 20
   rotSpeed: 10
+  health: 100
   currGun: {fileID: 0}
   cogCogment: {fileID: 0}
 --- !u!114 &775408538
@@ -1197,10 +1198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60729b262476d9248881fd48bd397848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 54823788870851674, guid: 8eef2f4a21a8a934fa55ff7461e28be2,
-    type: 2}
-  speed: 50
-  fireRate: 0.11
 --- !u!1 &804233919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,7 +3039,8 @@ MonoBehaviour:
   speed: 6
   jumpSpeed: 8
   gravity: 20
-  rotSpeed: 10
+  rotSpeed: 50
+  health: 100
   currGun: {fileID: 0}
   cogCogment: {fileID: 0}
 --- !u!23 &1877234327
