@@ -16,6 +16,12 @@ public class Gun : Pickup {
 
     Rigidbody clone;
 
+    public void augmentGun()
+    {
+        
+    }
+
+
     public void Fire()
     {
         if (Time.time > fireRate + lastShot)
@@ -31,7 +37,7 @@ public class Gun : Pickup {
 
     public override void Interact(GameObject player)
     {
-        if(player.GetComponent<Cog>())
+        if (player.tag == "Cog")
         {
             GrabPickup(player);
         }
@@ -45,17 +51,19 @@ public class Gun : Pickup {
         if (oldGun)
         {
             //Debug.Log("There's a gun");
+            
             oldGun.transform.parent = null;
             oldGun.Idle();
-            transform.position = gunLoc.position;
+            player.GetComponent<CharacterInput>().currGun = this;
             transform.parent = gunLoc;
-        }
-        else
-        {
-            //Debug.Log("There's no gun");
             transform.position = gunLoc.position;
-            transform.parent = gunLoc;
         }
+        //else
+        //{
+        //    //Debug.Log("There's no gun");
+        //    transform.position = gunLoc.position;
+        //    transform.parent = gunLoc;
+        //}
         player.GetComponent<Cog>().currGun = this;
     }
 

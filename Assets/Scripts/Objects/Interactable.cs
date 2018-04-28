@@ -8,4 +8,5 @@ public abstract class Interactable : MonoBehaviour {
 
     //method called when player interacts with object
     public abstract void Interact(GameObject player);
+
 }

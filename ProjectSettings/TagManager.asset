@@ -8,6 +8,8 @@ TagManager:
   - Gun
   - Bullet
   - Pickup
+  - Cog
+  - Nutech
   layers:
   - Default
   - TransparentFX
