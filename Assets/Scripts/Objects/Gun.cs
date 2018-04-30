@@ -50,13 +50,23 @@ public class Gun : Pickup {
 
         if (oldGun)
         {
-            //Debug.Log("There's a gun");
-            
-            oldGun.transform.parent = null;
-            oldGun.Idle();
-            player.GetComponent<CharacterInput>().currGun = this;
+            //Debug.Log("There's a gun");         
+
             transform.parent = gunLoc;
             transform.position = gunLoc.position;
+
+            Gun[] guns = player.GetComponentsInChildren<Gun>();
+            for(int i = 0; i < guns.Length; i++)
+            {
+                Debug.Log(guns[i]);
+                if (guns[i] == this.transform)
+                {
+                    Debug.Log()
+                    player.GetComponent<CharacterInput>().currGun = this;
+                    oldGun.transform.parent = null;
+                    //oldGun.Idle();
+                }
+            }
         }
         //else
         //{
