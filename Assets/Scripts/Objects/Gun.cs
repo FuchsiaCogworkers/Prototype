@@ -28,7 +28,7 @@ public class Gun : Pickup {
         {
             clone = Instantiate(projectile, transform.position, transform.rotation);
             //projectile.tag = "Bullet";
-            clone.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+            clone.velocity = transform.TransformDirection(new Vector3(0, speed, 0));
 
             lastShot = Time.time;
         }
@@ -61,7 +61,6 @@ public class Gun : Pickup {
                 Debug.Log(guns[i]);
                 if (guns[i] == this.transform)
                 {
-                    //Debug.Log("");
                     player.GetComponent<CharacterInput>().currGun = this;
                     oldGun.transform.parent = null;
                     //oldGun.Idle();
