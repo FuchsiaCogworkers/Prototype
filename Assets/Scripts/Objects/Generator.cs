@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Generator : MonoBehaviour {
 
+    private StateManager sm;
+
 	// Use this for initialization
 	void Start () {
-		
+        sm = FindObjectOfType<StateManager>();
 	}
 	
 	// Update is called once per frame
@@ -16,6 +18,6 @@ public class Generator : MonoBehaviour {
 
     private void OnDestroy()
     {
-        
+        sm.SendMessage("GeneratorDestroyed");
     }
 }
