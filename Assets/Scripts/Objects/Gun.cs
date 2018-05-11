@@ -12,6 +12,9 @@ public class Gun : Pickup {
     public float fireRate = 0.11f;
     private float lastShot = -10.0f;
 
+    public Vector3 offsetPos;
+    public Quaternion offsetRot;
+
     public Pickup augment;
 
     Rigidbody clone;
@@ -26,7 +29,7 @@ public class Gun : Pickup {
     {
         if (Time.time > fireRate + lastShot)
         {
-            clone = Instantiate(projectile, transform.position, transform.rotation);
+            clone = Instantiate(projectile, transform.position + offsetPos, transform.rotation);
             //projectile.tag = "Bullet";
             clone.velocity = transform.TransformDirection(new Vector3(0, speed, 0));
 
