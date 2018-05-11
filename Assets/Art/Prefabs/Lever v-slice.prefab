@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4355396245473178}
   - component: {fileID: 95375767023171354}
+  - component: {fileID: 136604836260878708}
+  - component: {fileID: 114682804761352784}
   m_Layer: 0
   m_Name: Lever v-slice
   m_TagString: Untagged
@@ -85,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137540672836134}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.259, y: 0.000000059604645, z: -4.1655626}
+  m_LocalPosition: {x: 8.485949, y: 0.5, z: -3.203941}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4785003019185558}
@@ -273,3 +275,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114682804761352784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137540672836134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71560fdecba20249ae9a84e9c283a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+--- !u!136 &136604836260878708
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137540672836134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 4.94
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.64, z: 0}

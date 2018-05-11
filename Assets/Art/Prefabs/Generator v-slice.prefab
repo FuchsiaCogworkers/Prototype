@@ -54,6 +54,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4787594299386592}
   - component: {fileID: 95099481966580140}
+  - component: {fileID: 114977900782964322}
+  - component: {fileID: 114006551851154618}
+  - component: {fileID: 136128387367486888}
   m_Layer: 0
   m_Name: Generator v-slice
   m_TagString: Untagged
@@ -188,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1448768715910114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27192745, y: 0.275, z: 0.8858054}
+  m_LocalPosition: {x: -3.526929, y: 0.7934868, z: -4.1052074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4110796628861580}
@@ -491,3 +494,39 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114006551851154618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1448768715910114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b04e56647e8e1b44ba212c716d839c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
+--- !u!114 &114977900782964322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1448768715910114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217f9b1dd47d45c41a10a25bf31f0089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136128387367486888
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1448768715910114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.12
+  m_Height: 5.01
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.89, z: 0.6}
