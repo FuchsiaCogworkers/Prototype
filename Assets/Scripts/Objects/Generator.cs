@@ -13,4 +13,9 @@ public class Generator : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnDestroy()
+    {
+        
+    }
 }
