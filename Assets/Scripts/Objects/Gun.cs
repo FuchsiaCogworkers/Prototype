@@ -61,7 +61,7 @@ public class Gun : Pickup {
                 Debug.Log(guns[i]);
                 if (guns[i] == this.transform)
                 {
-                    Debug.Log()
+                    //Debug.Log("");
                     player.GetComponent<CharacterInput>().currGun = this;
                     oldGun.transform.parent = null;
                     //oldGun.Idle();
