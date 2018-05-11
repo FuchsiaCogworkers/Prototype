@@ -13,7 +13,7 @@ public class Health : MonoBehaviour {
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Destroy(this);
+            Destroy(this.gameObject);
             Debug.Log("Dead!");
         }
     }
